@@ -68,7 +68,15 @@ function loadQuestions(mode) {
             {image: "resources/shapes/3.png", correctAnswer: "brazil"},
             {image: "resources/shapes/4.png", correctAnswer: "pakistan"},
             {image: "resources/shapes/5.png", correctAnswer: "thailand"},
-            {image: "resources/shapes/1.png", correctAnswer: "malaysia"},
+            {image: "resources/shapes/6.png", correctAnswer: "china"},
+            {image: "resources/shapes/7.png", correctAnswer: "indonesia"},
+            {image: "resources/shapes/8.png", correctAnswer: "mexico"},
+            {image: "resources/shapes/9.png", correctAnswer: "japan"},
+            {image: "resources/shapes/10.png", correctAnswer: "south korea"},
+            {image: "resources/shapes/11.png", correctAnswer: "vietnam"},
+            {image: "resources/shapes/12.png", correctAnswer: "denmark"},
+            {image: "resources/shapes/13.png", correctAnswer: "cuba"},
+            {image: "resources/shapes/14.png", correctAnswer: "egypt"},
         ];
     }
 }

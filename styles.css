@@ -1,7 +1,21 @@
+#container {
+    text-align: center;
+    background-color: #B9FFBB;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+}
+
 .hidden {
     display: none;
 }
 
+
+
 #image-question {
     width: 200px;
+}
+
+h1 {
+    color: white;
 }

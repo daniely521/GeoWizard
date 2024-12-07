@@ -7,26 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Option Choosing -->
-     <div id="choosing-screen" class="hidden-false">
-        <h1>Geo Pro</h1>
-        <p>Try these games related to geography!</p>
-        <p>Select a gamemode to begin!</p>
-        <button class="c-buttons" id="flags">Flags</button>
-        <button class="c-buttons" id="landmarks">Landmarks</button>
-        <button class="c-buttons" id="shape">Shapes</button>
+    <div id="container">
+        <!-- Option Choosing -->
+        <div id="choosing-screen" class="hidden-false">
+            <h1>Geo Pro</h1>
+            <p>Try these games related to geography!</p>
+            <p>Select a gamemode to begin!</p>
+            <button class="c-buttons" id="flags">Flags</button>
+            <button class="c-buttons" id="landmarks">Landmarks</button>
+            <button class="c-buttons" id="shape">Shapes</button>
+        </div>
+        <!-- Game Screen -->
+        <div id="game-display" class="hidden">
+            <h1>Geo Pro</h1>
+            <p>Which country is this?</p>
+            <img src="" alt="?" id="image-question">
+            <input type="text" id="guess-input" placeholder="Enter Country Name...">
+            <button id="submit-button">Submit</button>
+            <p id="feedback"></p>
+            <button id="home-button">Home</button>
+            <button id="skip-button">Skip</button>
+        </div>
     </div>
-    <!-- Game Screen -->
-     <div id="game-display" class="hidden">
-        <h1>Geo Pro</h1>
-        <p>Which country is this?</p>
-        <img src="" alt="?" id="image-question">
-        <input type="text" id="guess-input" placeholder="Enter Country Name...">
-        <button id="submit-button">Submit</button>
-        <p id="feedback"></p>
-        <button id="home-button">Home</button>
-        <button id="skip-button">Skip</button>
-     </div>
     <script src="script.js"></script>
 </body>
 </html>
