@@ -1,3 +1,7 @@
 .hidden {
     display: none;
 }
+
+#image-question {
+    width: 200px;
+}

@@ -30,18 +30,36 @@ function startGame(mode) {
 function loadQuestions(mode) {
     if (mode === "flags"){
         questions = [
-            {image: "resources/flags/1", correctAnswer: "1"},
-            {image: "resources/flags/2", correctAnswer: "2"}
+            {image: "resources/flags/1.jpg", correctAnswer: "mexico"},
+            {image: "resources/flags/2.jpg", correctAnswer: "indonesia"},
+            {image: "resources/flags/3.jpg", correctAnswer: "japan"},
+            {image: "resources/flags/4.jpg", correctAnswer: "china"},
+            {image: "resources/flags/5.jpg", correctAnswer: "south korea"},
+            {image: "resources/flags/6.jpg", correctAnswer: "thailand"},
+            {image: "resources/flags/7.jpg", correctAnswer: "india"},
+            {image: "resources/flags/8.jpg", correctAnswer: "pakistan"},
+            {image: "resources/flags/9.jpg", correctAnswer: "germany"},
+            {image: "resources/flags/10.jpg", correctAnswer: "brazil"},
+            {image: "resources/flags/11.jpg", correctAnswer: "italy"},
+            {image: "resources/flags/12.jpg", correctAnswer: "france"},
+            {image: "resources/flags/13.jpg", correctAnswer: "ukraine"},
+            {image: "resources/flags/14.jpg", correctAnswer: "malaysia"}
         ];
     } else if (mode === "landmarks") {
         questions = [
-            {image: "resources/landmarks/1", correctAnswer: "1"},
-            {image: "resources/landmarks/2", correctAnswer: "2"}
+            {image: "resources/landmarks/1.jpg", correctAnswer: "france"},
+            {image: "resources/landmarks/2.jpg", correctAnswer: "russia"},
+            {image: "resources/landmarks/3.jpg", correctAnswer: "greece"},
+            {image: "resources/landmarks/4.jpg", correctAnswer: "egypt"},
+            {image: "resources/landmarks/5.jpg", correctAnswer: "china"},
+            {image: "resources/landmarks/6.jpg", correctAnswer: "india"},
+            {image: "resources/landmarks/7.jpg", correctAnswer: "peru"},
+
         ];
     } else if (mode === "shape") {
         questions = [
-            {image: "resources/shapes/1", correctAnswer: "1"},
-            {image: "resources/shapes/2", correctAnswer: "2"}
+            {image: "resources/shapes/1.jpg", correctAnswer: "1"},
+            {image: "resources/shapes/2.jpg", correctAnswer: "2"}
         ];
     }
 }
@@ -67,7 +85,7 @@ function checkAnswer() {
             document.body.style.backgroundColor = "";
             currentQuestionIndex = (currentQuestionIndex+1)%questions.length;
             displayQuestions();
-        }, 2000);
+        }, 1000);
     } else {
         document.getElementById("feedback").textContent = "Wrong! Try again"
         document.getElementById("feedback").style.color = "red";
@@ -79,7 +97,7 @@ function skipQuesiton() {
     document.getElementById("feedback").textContent = `The correct answer is: ${correctAnswer}`;
 
     setTimeout(() => {
-        currentMode = (currentQuestionIndex + 1) % questions.length;
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
         displayQuestions();
     }, 2000);
 }
