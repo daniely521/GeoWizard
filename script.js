@@ -54,12 +54,17 @@ function loadQuestions(mode) {
             {image: "resources/landmarks/5.jpg", correctAnswer: "china"},
             {image: "resources/landmarks/6.jpg", correctAnswer: "india"},
             {image: "resources/landmarks/7.jpg", correctAnswer: "peru"},
-
+            {image: "resources/landmarks/8.jpg", correctAnswer: "england"},
+            {image: "resources/landmarks/9.jpg", correctAnswer: "dubai"},
+            {image: "resources/landmarks/10.jpg", correctAnswer: "italy"},
+            {image: "resources/landmarks/11.jpg", correctAnswer: "brazil"},
+            {image: "resources/landmarks/12.jpg", correctAnswer: "germany"},
+            {image: "resources/landmarks/13.jpg", correctAnswer: "mexico"}
         ];
     } else if (mode === "shape") {
         questions = [
-            {image: "resources/shapes/1.jpg", correctAnswer: "1"},
-            {image: "resources/shapes/2.jpg", correctAnswer: "2"}
+            {image: "resources/shapes/1.png", correctAnswer: "1"},
+            {image: "resources/shapes/2.png", correctAnswer: "2"}
         ];
     }
 }
