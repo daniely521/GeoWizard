@@ -63,8 +63,12 @@ function loadQuestions(mode) {
         ];
     } else if (mode === "shape") {
         questions = [
-            {image: "resources/shapes/1.png", correctAnswer: "1"},
-            {image: "resources/shapes/2.png", correctAnswer: "2"}
+            {image: "resources/shapes/1.png", correctAnswer: "malaysia"},
+            {image: "resources/shapes/2.png", correctAnswer: "france"},
+            {image: "resources/shapes/3.png", correctAnswer: "brazil"},
+            {image: "resources/shapes/4.png", correctAnswer: "pakistan"},
+            {image: "resources/shapes/5.png", correctAnswer: "thailand"},
+            {image: "resources/shapes/1.png", correctAnswer: "malaysia"},
         ];
     }
 }
