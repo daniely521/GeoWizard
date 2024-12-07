@@ -45,6 +45,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     width: 160px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #flags {
@@ -61,7 +62,7 @@ p {
 }
 
 .c-buttons:hover {
-    background-color: #a7cffc;
+    background-color: #9ccaff;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -90,10 +91,11 @@ p {
     background-color: #b9efff;
     color: #3168a8;
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #submit-button:hover {
-    background-color: #9fe9ff;
+    background-color: #8fe5ff;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,6 +109,7 @@ p {
     background-color: #e4ffb9;
     color: #6b9eda;
     cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #skip-button {
@@ -123,12 +126,12 @@ p {
 }
 
 #home-button:hover {
-    background-color: #dafba4;
+    background-color: #d6ff94;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 #skip-button:hover {
-    background-color: #ffda9e;
+    background-color: #ffd38b;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
