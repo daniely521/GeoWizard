@@ -10,23 +10,28 @@
     <div id="container">
         <!-- Option Choosing -->
         <div id="choosing-screen" class="hidden-false">
-            <h1>Geo Pro</h1>
+            <h1 class="title">Geo Pro</h1>
             <p>Try these games related to geography!</p>
             <p>Select a gamemode to begin!</p>
-            <button class="c-buttons" id="flags">Flags</button>
             <button class="c-buttons" id="landmarks">Landmarks</button>
+            <button class="c-buttons" id="flags">Flags</button>
             <button class="c-buttons" id="shape">Shapes</button>
         </div>
         <!-- Game Screen -->
         <div id="game-display" class="hidden">
-            <h1>Geo Pro</h1>
+            <h1 class="title">Geo Pro</h1>
             <p>Which country is this?</p>
-            <img src="" alt="?" id="image-question">
+            <div id="image-cont">
+                <img src="" alt="?" id="image-question">
+            </div>
             <input type="text" id="guess-input" placeholder="Enter Country Name...">
             <button id="submit-button">Submit</button>
-            <p id="feedback"></p>
+            <br>
+            <br>
             <button id="home-button">Home</button>
+            <p id="seperator"></p>
             <button id="skip-button">Skip</button>
+            <p id="feedback"></p>
         </div>
     </div>
     <script src="script.js"></script>

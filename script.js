@@ -30,53 +30,53 @@ function startGame(mode) {
 function loadQuestions(mode) {
     if (mode === "flags"){
         questions = [
-            {image: "resources/flags/1.jpg", correctAnswer: "mexico"},
-            {image: "resources/flags/2.jpg", correctAnswer: "indonesia"},
-            {image: "resources/flags/3.jpg", correctAnswer: "japan"},
-            {image: "resources/flags/4.jpg", correctAnswer: "china"},
-            {image: "resources/flags/5.jpg", correctAnswer: "south korea"},
-            {image: "resources/flags/6.jpg", correctAnswer: "thailand"},
-            {image: "resources/flags/7.jpg", correctAnswer: "india"},
-            {image: "resources/flags/8.jpg", correctAnswer: "pakistan"},
-            {image: "resources/flags/9.jpg", correctAnswer: "germany"},
-            {image: "resources/flags/10.jpg", correctAnswer: "brazil"},
-            {image: "resources/flags/11.jpg", correctAnswer: "italy"},
-            {image: "resources/flags/12.jpg", correctAnswer: "france"},
-            {image: "resources/flags/13.jpg", correctAnswer: "ukraine"},
-            {image: "resources/flags/14.jpg", correctAnswer: "malaysia"}
+            {image: "resources/flags/1.jpg", correctAnswer: "Mexico"},
+            {image: "resources/flags/2.jpg", correctAnswer: "Indonesia"},
+            {image: "resources/flags/3.jpg", correctAnswer: "Japan"},
+            {image: "resources/flags/4.jpg", correctAnswer: "China"},
+            {image: "resources/flags/5.jpg", correctAnswer: "South Korea"},
+            {image: "resources/flags/6.jpg", correctAnswer: "Thailand"},
+            {image: "resources/flags/7.jpg", correctAnswer: "India"},
+            {image: "resources/flags/8.jpg", correctAnswer: "Pakistan"},
+            {image: "resources/flags/9.jpg", correctAnswer: "Germany"},
+            {image: "resources/flags/10.jpg", correctAnswer: "Brazil"},
+            {image: "resources/flags/11.jpg", correctAnswer: "Italy"},
+            {image: "resources/flags/12.jpg", correctAnswer: "France"},
+            {image: "resources/flags/13.jpg", correctAnswer: "Ukraine"},
+            {image: "resources/flags/14.jpg", correctAnswer: "Malaysia"}
         ];
     } else if (mode === "landmarks") {
         questions = [
-            {image: "resources/landmarks/1.jpg", correctAnswer: "france"},
-            {image: "resources/landmarks/2.jpg", correctAnswer: "russia"},
-            {image: "resources/landmarks/3.jpg", correctAnswer: "greece"},
-            {image: "resources/landmarks/4.jpg", correctAnswer: "egypt"},
-            {image: "resources/landmarks/5.jpg", correctAnswer: "china"},
-            {image: "resources/landmarks/6.jpg", correctAnswer: "india"},
-            {image: "resources/landmarks/7.jpg", correctAnswer: "peru"},
-            {image: "resources/landmarks/8.jpg", correctAnswer: "england"},
-            {image: "resources/landmarks/9.jpg", correctAnswer: "dubai"},
-            {image: "resources/landmarks/10.jpg", correctAnswer: "italy"},
-            {image: "resources/landmarks/11.jpg", correctAnswer: "brazil"},
-            {image: "resources/landmarks/12.jpg", correctAnswer: "germany"},
-            {image: "resources/landmarks/13.jpg", correctAnswer: "mexico"}
+            {image: "resources/landmarks/1.jpg", correctAnswer: "France"},
+            {image: "resources/landmarks/2.jpg", correctAnswer: "Russia"},
+            {image: "resources/landmarks/3.jpg", correctAnswer: "Greece"},
+            {image: "resources/landmarks/4.jpg", correctAnswer: "Egypt"},
+            {image: "resources/landmarks/5.jpg", correctAnswer: "China"},
+            {image: "resources/landmarks/6.jpg", correctAnswer: "India"},
+            {image: "resources/landmarks/7.jpg", correctAnswer: "Peru"},
+            {image: "resources/landmarks/8.jpg", correctAnswer: "England"},
+            {image: "resources/landmarks/9.jpg", correctAnswer: "Dubai"},
+            {image: "resources/landmarks/10.jpg", correctAnswer: "Italy"},
+            {image: "resources/landmarks/11.jpg", correctAnswer: "Brazil"},
+            {image: "resources/landmarks/12.jpg", correctAnswer: "Germany"},
+            {image: "resources/landmarks/13.jpg", correctAnswer: "Mexico"}
         ];
     } else if (mode === "shape") {
         questions = [
-            {image: "resources/shapes/1.png", correctAnswer: "malaysia"},
-            {image: "resources/shapes/2.png", correctAnswer: "france"},
-            {image: "resources/shapes/3.png", correctAnswer: "brazil"},
-            {image: "resources/shapes/4.png", correctAnswer: "pakistan"},
-            {image: "resources/shapes/5.png", correctAnswer: "thailand"},
-            {image: "resources/shapes/6.png", correctAnswer: "china"},
-            {image: "resources/shapes/7.png", correctAnswer: "indonesia"},
-            {image: "resources/shapes/8.png", correctAnswer: "mexico"},
-            {image: "resources/shapes/9.png", correctAnswer: "japan"},
-            {image: "resources/shapes/10.png", correctAnswer: "south korea"},
-            {image: "resources/shapes/11.png", correctAnswer: "vietnam"},
-            {image: "resources/shapes/12.png", correctAnswer: "denmark"},
-            {image: "resources/shapes/13.png", correctAnswer: "cuba"},
-            {image: "resources/shapes/14.png", correctAnswer: "egypt"},
+            {image: "resources/shapes/1.png", correctAnswer: "Malaysia"},
+            {image: "resources/shapes/2.png", correctAnswer: "France"},
+            {image: "resources/shapes/3.png", correctAnswer: "Brazil"},
+            {image: "resources/shapes/4.png", correctAnswer: "Pakistan"},
+            {image: "resources/shapes/5.png", correctAnswer: "Thailand"},
+            {image: "resources/shapes/6.png", correctAnswer: "China"},
+            {image: "resources/shapes/7.png", correctAnswer: "Indonesia"},
+            {image: "resources/shapes/8.png", correctAnswer: "Mexico"},
+            {image: "resources/shapes/9.png", correctAnswer: "Japan"},
+            {image: "resources/shapes/10.png", correctAnswer: "South Korea"},
+            {image: "resources/shapes/11.png", correctAnswer: "Vietnam"},
+            {image: "resources/shapes/12.png", correctAnswer: "Denmark"},
+            {image: "resources/shapes/13.png", correctAnswer: "Cuba"},
+            {image: "resources/shapes/14.png", correctAnswer: "Egypt"},
         ];
     }
 }
@@ -94,9 +94,8 @@ function checkAnswer() {
     const correctAnswer = questions[currentQuestionIndex].correctAnswer.toLowerCase();
 
     if (userAnswer === correctAnswer) {
-        document.getElementById("feedback").textContent = "Correct! ✅";
+        document.getElementById("feedback").textContent = "Correct! ";
         document.getElementById("feedback").style.color = "green";
-        document.body.style.backgroundColor = "green";
 
         setTimeout(() => {
             document.body.style.backgroundColor = "";
@@ -110,11 +109,13 @@ function checkAnswer() {
 }
 
 function skipQuesiton() {
-    const correctAnswer = questions[currentQuestionIndex].correctAnswer.toLowerCase();
+    const correctAnswer = questions[currentQuestionIndex].correctAnswer;
+    document.getElementById("feedback").style.color = "blue";
     document.getElementById("feedback").textContent = `The correct answer is: ${correctAnswer}`;
 
     setTimeout(() => {
         currentQuestionIndex = (currentQuestionIndex + 1) % questions.length;
         displayQuestions();
+        document.getElementById("feedback").style.color = "";
     }, 2000);
 }
